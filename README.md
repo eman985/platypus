@@ -8,6 +8,19 @@ Before running this application, make sure you have:
  - Node.js (version 16.x or higher)
  - npm (usually comes with Node.js)
 
+# Files
+- main.js
+- package.json
+- package-lock.json
+- index.html
+- css.css
+- script.js
+- shop.html
+- story.html
+- studysession.html
+- choosestudytime.html
+- chat.html
+
 In your Terminal:
 # 1. Clone the repository
  ```
