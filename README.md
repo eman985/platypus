@@ -7,6 +7,7 @@ Platypus XP is a project we created to help bring back the fun into studying. It
 Before running this application, make sure you have:
  - Node.js (version 16.x or higher)
  - npm (usually comes with Node.js)
+ - Electron
 
 # Files
 - main.js
