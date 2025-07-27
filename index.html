@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>study with platy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Chelsea+Market&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <header>
+        <h1>Platypus XP</h1>
+        <div class="xp-counter">
+            <img src="coin.png" alt="XP Coin">
+            <span id="xpDisplay">0</span>
+            <span class="xp-label">XP</span>
+        </div>
+    </header>
+
+    <!-- Add the cute platy here, right before the buttons -->
+    <div class="cute-platy-container">
+        <div class="platy-cute-img" id="platyCute">
+            <div class="speech-bubble-cute" id="speechBubbleCute">
+                Hello! Ready to study? 💕
+            </div>
+        </div>
+    </div>
+    <div id="main-buttons-wrapper">
+        <div id="main-button_1">
+            <button class="main-homepage-button" onclick="window.location.href='./studysession.html'"><span>start
+                    study</span></button>
+        </div>
+
+    </div>
+    <br><br>
+    <div id="button-container">
+        <div class="button-container">
+            <button class="sub-homepage-button" onclick="window.location.href='./shop.html'"><span>Shop</span></button>
+        </div>
+        <div class="button-container">
+            <button class="sub-homepage-button" onclick="window.location.href='./chat.html'"><span>Chat</span></button>
+        </div>
+        <div class=" button-container">
+            <button class="sub-homepage-button"
+                onclick="window.location.href='./story.html'"><span>Story</span></button>
+        </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <footer>
+        <p>2025 Platy XP. CS Girlies Hackathon Entry</p>
+    </footer>
+
+    <script>
+        // homepage IMAGES AND SPEECH BUBBLE
+        let cuteDirection = 'right';
+        let cuteAnimationInterval;
+        let cuteSpeechTimeout;
+
+        const cuteMessages = [
+            "Help me by studying!",
+            "Go to 'Story'!",
+            "You can do this...",
+            "I need you! So study!",
+            "Get rich by studying!",
+            "Study with me!",
+            "Dress me up!",
+            "Buy me outfits!",
+            "I like you when you study!",
+            "Let me out..!",
+            "You can pet me later!"
+        ];
+
+        function startCutePlatyAnimation() {
+            const platyCute = document.getElementById('platyCute');
+
+            if (!platyCute) {
+                console.log('platyCute element not found');
+                return;
+            }
+
+            console.log('Starting cute platy animation');
+
+            // Set initial image
+            platyCute.style.backgroundImage = `url('platy-heart-${cuteDirection}.png')`;
+
+
+            // Start showing speech bubbles
+            startDynamicSpeech();
+
+        }
+
+        function startDynamicSpeech() {
+            // Show first message after 3 seconds
+            cuteSpeechTimeout = setTimeout(() => {
+                showCuteMessage();
+                scheduleNextSpeech();
+            }, 3000);
+        }
+
+        function scheduleNextSpeech() {
+            // Schedule next message between 8-12 seconds
+            const nextDelay = Math.random() * 4000 + 8000;
+
+            cuteSpeechTimeout = setTimeout(() => {
+                showCuteMessage();
+                scheduleNextSpeech();
+            }, nextDelay);
+        }
+
+        function showCuteMessage() {
+            const speechBubbleCute = document.getElementById('speechBubbleCute');
+
+            if (!speechBubbleCute) {
+                console.log('speechBubbleCute element not found');
+                return;
+            }
+
+            console.log('Showing cute message');
+
+            // Pick random message
+            const randomMessage = cuteMessages[Math.floor(Math.random() * cuteMessages.length)];
+            speechBubbleCute.textContent = randomMessage;
+
+            // Randomly position the speech bubble on different sides
+            const sides = ['right']
+            const randomSide = sides[Math.floor(Math.random() * sides.length)];
+
+            // Remove all existing position classes
+            speechBubbleCute.classList.remove('left', 'right', 'top-left', 'top-right');
+
+            // Add the new position class
+            speechBubbleCute.classList.add(randomSide);
+            speechBubbleCute.classList.add('show');
+
+            // Add wiggle animation to platy when talking
+            const platyCute = document.getElementById('platyCute');
+            if (platyCute) {
+                platyCute.classList.add('wiggle');
+            }
+
+            // Hide after 3 seconds
+            setTimeout(() => {
+                speechBubbleCute.classList.remove('show');
+                if (platyCute) {
+                    platyCute.classList.remove('wiggle');
+                }
+            }, 3000);
+        }
+
+        // Start when page loads - make sure this runs
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM loaded, starting platy animation');
+            startCutePlatyAnimation();
+        });
+
+        // Also try window.onload as backup
+        window.addEventListener('load', function () {
+            console.log('Window loaded, starting platy animation');
+            startCutePlatyAnimation();
+        });
+
+        // Clean up when leaving page
+        window.addEventListener('beforeunload', function () {
+            clearInterval(cuteAnimationInterval);
+            clearTimeout(cuteSpeechTimeout);
+        });
+    </script>
+</body>
+
+</html>

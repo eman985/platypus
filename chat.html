@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platy</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Chelsea+Market&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <button class="back-button" id="backButton">
+        <div class="back-button-inner">
+            ← Home
+        </div>
+    </button>
+    </div>
+    <h1>Chat with Platy</h1>
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <div class="empty-state">
+                <div class="platy-welcome"><img src='platy-heart-left.png' id="welcome"></div>
+                <p>Oh hi! Platy will help you since you help Platy with studying... </p>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-dots">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <textarea class="chat-input" id="chatInput" placeholder="Type your message here..." rows="1"></textarea>
+            <button class="send-button" id="sendButton">
+                <div class="send-button-inner">
+                    Send
+                </div>
+            </button>
+        </div>
+    </div>
+    <script src="preload.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

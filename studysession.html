@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Chelsea+Market&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>study with platypooh</title>
+</head>
+
+<body>
+    <header>
+        <h1>Study with Platy</h1>
+        <div class="xp-counter">
+            <img src="coin.png">
+            <span id="xpDisplay">0</span>
+            <span class="xp-label">XP</span>
+        </div>
+    </header>
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div class="platy-study-img" id="platyImg">
+        <div class="speech-bubble" id="speechBubble">Let's focus! 📚</div>
+    </div>
+    <div class="timer-display" id="timerDisplay">25:00</div>
+
+    <div id="button-container">
+        <div class="button-container">
+            <button class="sub-homepage-button" id="pauseBtn" onclick="togglePause()">Pause</button>
+        </div>
+        <div class="button-container">
+            <button class="sub-homepage-button" onclick="endTimer()">End Session</button>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
