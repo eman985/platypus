@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platy XP Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Chelsea+Market&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <header>
+        <h1>Platy XP Shop</h1>
+        <div class="xp-counter">
+            <img src="coin.png" alt="XP Coin">
+            <span id="xpDisplay">0</span>
+            <span class="xp-label">XP</span>
+        </div>
+    </header>
+
+    <div class="shop-container">
+        <div class="shop-header">
+            <h2> Welcome to the Platy Shop! </h2>
+            <p>Spend your hard-earned XP on amazing items to jazz up your Platy!</p>
+        </div>
+
+        <div id="shopContainer" class="shop-grid">
+            <!-- Shop items will be dynamically loaded here -->
+        </div>
+
+        <div class="back-to-home">
+            <div id="button-container">
+                <div class="button-container">
+                    <button class="main-homepage-button" onclick="window.location.href='./index.html'">
+                        <span>Back to Home</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item Modal -->
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="Item Image">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalName"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-price" id="modalPrice"></div>
+                    <div id="button-container">
+                        <div class="button-container">
+                            <button id="purchaseBtn" class="purchase-btn"><span>Purchase</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 Platy XP. CS Girlies Hackathon Entry</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
