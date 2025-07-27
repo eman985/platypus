@@ -2,7 +2,7 @@
 CS Girlies Hackathon Entry by sara.a.a and elmori_2.0
 
 # What is the project about?
-Platypus XP is a project we created to help bring back the fun into studying. It might seem like your typical study application, but it's not! With our adorable mascot Platy (with a wild backstory) we're bringing back the support and companionship everyone should have when studying. With Platy we don't only want to connect people but we wanted to support students through such stressful times by bringing some silliness and motivation in our project! The art is all made by us with inspiration from the internet of course
+Platypus XP is a project we created to help bring back the fun into studying. It might seem like your typical study application, but it's not! With our adorable mascot Platy (with a wild backstory) we're bringing back the support and companionship everyone should have when studying. With Platy we don't only want to connect people but we wanted to support students through such stressful times by bringing some silliness and motivation in our project! The art is all made by us with inspiration from the internet.
 
 Before running this application, make sure you have:
  - Node.js (version 16.x or higher)
